@@ -104,7 +104,9 @@ For example if the sentence "train is going station to the Fred," it will get fl
 
 
 ### Self-attention mechanism 
-[Go in detail with this]
+Self-attention is a mechanism used in machine learning, particularly in natural language processing (NLP) and computer vision tasks, to capture dependencies and relationships within input sequences. It allows the model to identify and weigh the importance of different parts of the input sequence by attending to itself.
+
+Self-attention operates by transforming the input sequence into three vectors: query, key, and value. These vectors are obtained through linear transformations of the input. The attention mechanism calculates a weighted sum of the values based on the similarity between the query and key vectors. The resulting weighted sum, along with the original input, is then passed through a feed-forward neural network to produce the final output. This process allows the model to focus on relevant information and capture long-range dependencies.
 
 ## Specifications of a dataset: large, accurate, classified, readable, domain specific, relevant
 [For each specification write the definition and an example of a dataset that complies that specification and a dataset that doesn't comply that specification]
