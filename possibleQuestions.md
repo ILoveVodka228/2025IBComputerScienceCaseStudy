@@ -13,14 +13,47 @@ Based on this part of the paper 3 (at the end) here there are several questions 
 * What are the power requirements that we need to create a bot like this? (in comparassion with a human helpdesk)
 
 
-## Answers 
-
-
+Answers 
 * Evaluate three different ways of reducing the latency of the system:
 
   In order to reduce the latency of a system, we can manage the dependencies. When these dependencies are tightly coupled (meaning they rely heavily on each other), they can create bottlenecks if one component is delayed or experiences an error. Reducing or decoupling dependencies can improve system performance and responsiveness by allowing different parts of the system to operate more independently. There can be three ways:
   * Use of the Natural language understanding (NLU) pipeline: the NLU pipeline can be used to transform unstructured text into machine-actionable information. On one hand, this helps to identify and filter out unnecessary models, leading to a reduced latency. The LU can also handle a wide variety of user inputs without requiring predefined commands, making it easier to scale up user interaction capabilities. Additionally, advanced NLU can maintain context over interactions, allowing it to predict and prefetch data related to previous user actions or queries and enabling faster responses to follow-up questions, as well as reducing repetitive dependency calls and enhancing user experience.
   However, on the other hand, many NLU solutions rely on third-party APIs (e.g., Google Dialogflow), meaning that there’s unpredictable latency if there are network issues or if the third-party service experiences downtime. Moreover, NLU models, especially complex ones, can require significant processing time to parse and understand inputs, potentially slowing down response time. Regarding privacy concerns, NLU systems often process and store user input data to improve accuracy. In cases where third-party services are used, sensitive information may be transferred externally. Privacy and security concerns can limit NLU’s usage, especially in sensitive applications, and might require additional security measures, which could further impact latency.
+
+
+--------
+
+Evaluate three different ways of reducing the latency of the system
+
+1) Latency is...
+2) Smaller versions- reduce latency - but..
+3) Training - reduce latency - but..
+4) Critical path - what is it- how it reduces
+5) Conclusion
+
+
+Latency refers to a delay or lag in response time and can be faced in different systems such as chat bots.
+It takes a vast network of machine learning models for conversational artificial intelligence (AI) to 
+determine what to say next, with each model solving a small piece of the puzzle. One model might 
+take the user’s location into account, while another could analyze the history of user interactions, 
+including the feedback provided by users on similar responses. Every model should add 
+improvement but at the cost of increasing the system’s latency.
+
+One way to overcome latency is to use smaller modules of IA. For example chat GPT -4o mini, that is a more efficient and slightly smaller version of GPT-4, optimized to perform faster while using fewer resources. The latency would be decreased, however the reply won't be that deep and explained as in a bigger version.
+ 
+Training a chatbot is another step towards improving a chatbot’s ability to understand text that then reduce response time. The training dataset needs to be large, accurate, classified, readable, domain specific and relevant. A well-designed training dataset can improve the chatbot’s response quality and indirectly reduce latency by reducing the amount of time needed to process and interpret user inputs.
+
+That latency is a product of a decision algorithm known as the “critical path”, which is the shortest 
+and most efficient sequence of linked machine learning models required to go from the input of the 
+user’s message to the output of the chatbot’s response. It is known that changes to one model can 
+impact larger machine learning networks with machine learning dependencies.
+ One way to overcome dependencies is to transform unstructured text into machine-actionable 
+information. Natural language understanding (NLU) is a pipeline created through many machine 
+learning models that carry out different functions to improve the chatbot’s understanding of user 
+input. This helps to identify and filter out unnecessary models, leading to a reduced latency.
+ 
+
+In conclusion all the methods above help to reduce latency for an IA system, however all of them require specific features (and difficulties) in return.
 
 * Analyize the different stages of natural language processing and what are the useful inputs (for the context of the insurance company bot) that we can find at each step.
 
